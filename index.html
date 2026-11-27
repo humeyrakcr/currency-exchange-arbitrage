@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="An interactive Bellman–Ford demonstration using a graph of hypothetical exchange rates.">
+<title>Currency Exchange Arbitrage</title>
+<link rel="stylesheet" href="style.css">
+<script src="engine.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">Graph algorithms <span>·</span> Interactive simulation</p>
+    <h1>Currency Exchange Arbitrage</h1>
+    <p class="intro">Change an exchange rate and see whether a round trip returns more than it started with.</p>
+  </header>
+  <section class="workspace" aria-label="Currency arbitrage simulator">
+    <div class="scene">
+      <canvas id="graph" aria-label="Directed USD, EUR and GBP exchange-rate graph"></canvas>
+      <div class="network-caption">Directed exchange graph</div>
+    </div>
+    <aside>
+      <h2>Exchange rates</h2>
+      <div class="presets">
+        <button type="button" id="balanced" aria-pressed="false">Balanced</button>
+        <button type="button" id="opportunity" aria-pressed="true">Arbitrage example</button>
+      </div>
+      <div id="rates"></div>
+      <p class="note">Hypothetical rates. Fees and market execution are excluded.</p>
+    </aside>
+  </section>
+  <section id="result" class="result" aria-live="polite"></section>
+</main>
+</body>
+</html>

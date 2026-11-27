@@ -1,0 +1,31 @@
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#0d1519;color:#f3f8f7}
+*{box-sizing:border-box}
+body{margin:0}
+main{width:min(1120px,calc(100% - 48px));margin:42px auto}
+header{margin-bottom:22px}
+.eyebrow,.network-caption,output,.route{font-family:ui-monospace,monospace}
+.eyebrow{color:#79e5c1;margin:0 0 10px;font-size:.875rem}
+.eyebrow span{color:#aebfbd}
+h1{font-size:clamp(2rem,5vw,4rem);line-height:1.05;letter-spacing:-.06em;margin:0}
+.intro{color:#b4c5c3;margin:12px 0 0}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;background:#122126;border:1px solid #344744;border-radius:18px;overflow:hidden}
+.scene{min-height:390px;position:relative;background:#0e1c22}
+canvas{display:block;position:absolute;width:100%;height:100%}
+.network-caption{position:absolute;left:16px;bottom:13px;color:#aabfbc;font-size:.8rem;pointer-events:none}
+aside{padding:20px;border-left:1px solid #344744}
+h2{font-size:1rem;margin:0 0 14px}
+.presets{display:flex;gap:8px;margin-bottom:14px}
+button,input{font:inherit;color:inherit;border:1px solid #455d57;border-radius:7px;background:#1b2c30}
+button{padding:8px 10px;cursor:pointer;font-size:.875rem}
+button[aria-pressed=true]{background:#78e1ba;color:#0b231b;border-color:#78e1ba;font-weight:700}
+.rate{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:7px 0;font-size:.875rem}
+input{width:100px;padding:6px 9px;font-variant-numeric:tabular-nums}
+input[aria-invalid=true]{border-color:#ff9d88}
+:focus-visible{outline:2px solid #a8f5de;outline-offset:2px}
+.note{color:#aabfbc;font-size:.82rem;margin:14px 0 0}
+.result{margin-top:15px;border:1px solid #344744;border-radius:14px;background:#122126;padding:17px 20px}
+.result h2{margin:0 0 8px}
+.result p{margin:5px 0;color:#b4c5c3}
+.result strong{color:#79e5c1}
+.result .route{color:#edf7f4}
+@media(max-width:680px){main{width:calc(100% - 24px);margin:22px auto}.workspace{grid-template-columns:1fr}.scene{min-height:310px}aside{border-left:0;border-top:1px solid #344744}}
